@@ -6,8 +6,9 @@ import { styles } from "./styles";
 const Categories = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      <Text>Chapi and Jack</Text>
       <Text> Categories </Text>
-      <Button title="IR A PRODUCTS" onPress={() => navigation.navigate("Products")}/>
+      <Button title="IR A PRODUCTS" onPress={() => navigation.navigate("Products")} />
     </View>
   );
 };

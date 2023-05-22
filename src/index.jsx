@@ -2,8 +2,8 @@ import { useFonts } from "expo-font";
 import { View } from "react-native";
 
 // import { Categories } from "./screens";
-import ShopNaviation from "./navigation/ShopNavigation";
 import { styles } from "./styles";
+import AppNavigation from "./navigation";
 
 const App = () => {
   const [loaded] = useFonts({
@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <ShopNaviation />
+      <AppNavigation/>
     </View>
   );
 };

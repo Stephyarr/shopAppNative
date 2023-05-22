@@ -1,20 +1,36 @@
-import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { Categories, ProductDetail, Products } from "../screens";
 
-const ShopNaviation = () => {
+const ShopNavigation = () => {
   const Stack = createNativeStackNavigator();
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Categories" component={Categories} />
-        <Stack.Screen name="Products" component={Products} />
-        <Stack.Screen name="ProductDetail" component={ProductDetail} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator initialRouteName="Categories">
+      <Stack.Screen
+        name="Categories"
+        component={Categories}
+        options={{
+          headerShown: false,
+          title: "Categoria",
+        }}
+      />
+      <Stack.Screen
+        name="Products"
+        component={Products}
+        options={{
+          title: "Product",
+        }}
+      />
+      <Stack.Screen
+        name="ProductDetail"
+        component={ProductDetail}
+        options={{
+          title: "Product Detail",
+        }}
+      />
+    </Stack.Navigator>
   );
 };
 
-export default ShopNaviation;
+export default ShopNavigation;

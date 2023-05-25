@@ -1,12 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 
 import { styles } from "./styles";
 
-const CategoryItem = () => {
+const CategoryItem = ({ item, onSelected }) => {
   return (
     <View style={styles.container}>
-      <Text>Category Item</Text>
+      <TouchableOpacity style={styles.toucheContainer} onPress={() => onSelected(item)}>
+        <View style={styles.textContent}>
+          <Text style={styles.titleCategory}>{item.title}</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };

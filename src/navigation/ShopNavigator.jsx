@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { Categories, ProductDetail, Products } from "../screens";
 
-const ShopNavigation = () => {
+const ShopNavigator = () => {
   const Stack = createNativeStackNavigator();
 
   return (
@@ -33,4 +33,4 @@ const ShopNavigation = () => {
   );
 };
 
-export default ShopNavigation;
+export default ShopNavigator;
